@@ -3,8 +3,6 @@
 The problem with visualizing a .html file(to keep plotly plots static) in a popup on a folium map is that Streamlit reads it as a different page. However, the URL of streamlit never changes to .html, only to .py if the creator created it in such a way.
 What this readme is about is working around the problem, creating a folium map, and implementing it in streamlit. We highly recommend you read [Streamlit alliander](https://github.com/DinandK/alliander) before continuing
 
-## Requirements
-
 ## Preperation
 First thing first, we need coordinates from the MRID's. We got it from [PDOK](https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/841b0f6f-3141-40dd-bec5-77e0065bd688).
 
