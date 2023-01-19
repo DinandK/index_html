@@ -33,7 +33,7 @@ Regarding the static web app, we recommend reading the quick start. It guides yo
 components.iframe("https://your_static_app_url_here.net/",height= 800)
 ```
 
-## Useful sources.
+## Useful sources
 [Tutorial: How to Embed Interactive Plotly Visualizations in Folium Map Pop-ups ](https://towardsdatascience.com/how-to-embed-interactive-plotly-visualizations-in-folium-map-pop-ups-c69c818a8cd9)
 
 [Quickstart: Building your first static site with Azure Static Web Apps](https://learn.microsoft.com/en-us/azure/static-web-apps/getting-started?tabs=vanilla-javascript)
