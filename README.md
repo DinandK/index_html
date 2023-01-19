@@ -11,18 +11,26 @@ First thing first, we need coordinates from the MRID's. We got it from [PDOK](ht
 ## Data Preparation 
 After getting the data from PDOK, the location.xlsx should look something like this:
 
-| longitude  | latitude | Gebied  | html_file |
-| ------------- | ------------- | ------------- | ------------- | 
-| 51,9673788258995  | 5,84254484441544  | Arhnem  | Nan | 
-| 51,9651329164503  | 5,82244851029431  | Arhnem  | Nan |  
+| longitude  | latitude | Gebied  |
+| ------------- | ------------- | ------------- |
+| 51,9673788258995  | 5,84254484441544  | Arhnem  |
+| 51,9651329164503  | 5,82244851029431  | Arhnem  |  
 
 ## Getting the .html files
+We've created a specific .html generator to plot the different types of measurements. The .html generator can be found [here](https://github.com/DinandK/index_html/blob/main/HtmlGenerator.ipynb).
+
+## Combining the .html files with the location data.
+After you've completed all of the visuals, it's time to put everything together. The map creator (which is in the next step) loops through the location data so it is obligated to merge the plots to the specific location. The output of the location.xslx should look something like this:
+| longitude  | latitude | Gebied  | html_file |
+| ------------- | ------------- | ------------- | ------------- | 
+| 51,9673788258995  | 5,84254484441544  | Arhnem  | 133aaad0-7a96-5385-a436-42443c49a582.html | 
+| 51,9651329164503  | 5,82244851029431  | Arhnem  | 18001461-0c52-5caf-a1bf-dfe5284fa5cc.html |  
 
 ## Creating the map
-After you've got your file with the desired locations and visualizations, our [creating_map notebook](https://github.com/DinandK/index_html/blob/main/creating_map.ipynb) is the next step. You can simply run this notebook with your data and get an index.html as ouput.
+After you've got your file with the desired locations and visualizations, our [creating_map notebook](https://github.com/DinandK/index_html/blob/main/creating_map.ipynb) is the next step. You can simply run this notebook with your data and get an index.html as output.
 
 ## Putting the map on a static web app
-Regarding the static web app, we recommend reading the quickstart. It guides you through creating a basic static web app with the index.html you've just created. It is important to note that you will need to upload the index.html and all of the plots connected to each location as .html. After this is done, the static app will automatically update to the map with the corresponding plots. This url can then be pushed to st_page.py from our [Streamlit alliander](https://github.com/DinandK/alliander) with the following code:
+Regarding the static web app, we recommend reading the quick start. It guides you through creating a basic static web app with the index.html you've just created. It is important to note that you will need to upload the index.html and all of the plots connected to each location as .html. After this is done, the static app will automatically update the map with the corresponding plots. This URL can then be pushed to st_page.py from our [Streamlit alliander](https://github.com/DinandK/alliander) with the following code:
 ```python
 components.iframe("https://your_static_app_url_here.net/",height= 800)
 ```
